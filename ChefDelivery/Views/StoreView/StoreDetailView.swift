@@ -10,6 +10,7 @@ import SwiftUI
 struct StoreDetailView: View {
     
     let store: Store
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         
@@ -56,35 +57,56 @@ struct StoreDetailView: View {
                         .padding(.vertical, 10)
                     
                     ForEach(store.products) { product in
-                        HStack (spacing: 8){
-                            VStack (alignment: .leading, spacing: 8){
-                                
-                                Text(product.name)
-                                    .bold()
-                                
-                                Text(product.description)
-                                    .foregroundColor(.black.opacity(0.5))
+                        NavigationLink {
+                            ProductDetailView()
+                        } label: {
+                            HStack (spacing: 8){
+                                VStack (alignment: .leading, spacing: 8){
                                     
+                                    Text(product.name)
+                                        .bold()
+                                    
+                                    Text(product.description)
+                                        .foregroundColor(.black.opacity(0.5))
+                                        
+                                    
+                                    Text(product.formattedPrice)
+                                }
+                                .multilineTextAlignment(.leading)
                                 
-                                Text("R$ \(product.price)")
+                                Spacer()
+                                
+                                Image(product.image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .cornerRadius(12)
+                                    .frame(width: 120, height: 120)
+                                    .shadow(color: .black.opacity(0.5), radius: 20, x: 6, y: 8)
                             }
-                            
-                            Spacer()
-                            
-                            Image(product.image)
-                                .resizable()
-                                .scaledToFit()
-                                .cornerRadius(12)
-                                .frame(width: 120, height: 120)
-                                .shadow(color: .black.opacity(0.5), radius: 20, x: 6, y: 8)
+                            .padding(.vertical, 8)
+                            .foregroundColor(.black)
                         }
-                        .padding(.vertical, 8)
+
                     }
                 }
                 .padding()
             }
             .navigationTitle(store.name)
-        .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        HStack (spacing: 4) {
+                            Image(systemName: "cart")
+                            
+                            Text("Lojas")
+                        }
+                    }
+                }
+            }
         }
     }
 }

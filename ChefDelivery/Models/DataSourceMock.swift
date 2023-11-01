@@ -60,7 +60,7 @@ let storesMock: [Store] = [
         id: 3,
         name: "Carbron",
         logo: "carbron-logo",
-        foodCategory: "Comida Mexicana",
+        foodCategory: "Churrasco",
         headerImage: "carbron-header",
         location: "Rua Terceira, 789, São Paulo, SP",
         starsQty: 4,
