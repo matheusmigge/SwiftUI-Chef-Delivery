@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OrderType: Identifiable {
+struct OrderCategory: Identifiable {
     let id: Int
     let name: String
     let image: String

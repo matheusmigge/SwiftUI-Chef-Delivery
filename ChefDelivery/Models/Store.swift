@@ -8,8 +8,13 @@
 import Foundation
 
 struct Store: Identifiable {
+    
     let id: Int
     let name: String
-    let image: String
-    let category: String
+    let logo: String
+    let foodCategory: String
+    let headerImage: String
+    let location: String
+    let starsQty: Int
+    let products: [Product]
 }

@@ -14,7 +14,7 @@ struct StoreItemView: View {
     var body: some View {
       
             HStack {
-                Image(store.image)
+                Image(store.logo)
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(5)
@@ -24,21 +24,18 @@ struct StoreItemView: View {
                     Text(store.name)
                         .font(.subheadline)
                         .fontWeight(.semibold)
-                    Text(store.category)
+                    Text(store.foodCategory)
                         .font(.footnote)
                 }
                 
                 Spacer()
             }
             .padding(.leading,15)
-            .onTapGesture {
-                print("Botão \(store.name) pressionado")
-            }
     }
 }
 
 struct StoreItemView_Previews: PreviewProvider {
     static var previews: some View {
-        StoreItemView(store: Store(id: 1, name: "Cabrão", image: "carbron-logo", category: "Comida mexicana"))
+        StoreItemView(store: storesMock[0])
     }
 }

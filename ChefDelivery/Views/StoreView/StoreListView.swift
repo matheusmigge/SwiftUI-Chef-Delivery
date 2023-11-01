@@ -16,18 +16,25 @@ struct StoreListView: View {
                 .fontWeight(.bold)
                 .padding(.leading, 15)
             
-            VStack {
+            VStack (spacing: 30) {
                 ForEach(storesMock) { store in
-                    StoreItemView(store: store)
+                    NavigationLink {
+                        StoreDetailView(store: store)
+                    } label: {
+                        StoreItemView(store: store)
+                    }                    
                 }
             }
         }
+        .foregroundColor(.black)
         .padding(20)
     }
 }
 
 struct StoreListView_Previews: PreviewProvider {
     static var previews: some View {
-        StoreListView()
+        NavigationView{
+            StoreListView()
+        }
     }
 }

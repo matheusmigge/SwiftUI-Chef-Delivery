@@ -7,25 +7,25 @@
 
 import SwiftUI
 
-struct OrderTypeView: View {
+struct OrderCategoryView: View {
     
-    let orderType: OrderType
+    let orderCategory: OrderCategory
     
     var body: some View {
         VStack(spacing: 5) {
-            Image(orderType.image)
+            Image(orderCategory.image)
                 .resizable()
                 .scaledToFit()
                 .fixedSize(horizontal: false, vertical: true)
-            Text(orderType.name)
+            Text(orderCategory.name)
                 .font(.system(size: 10))
         }.frame(width: 70, height: 100)
         
     }
 }
 
-struct OrderTypeView_Previews: PreviewProvider {
+struct OrderCategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderTypeView(orderType: OrderType(id: 1, name: "Restaurantes", image: "hamburguer"))
+        OrderCategoryView(orderCategory: OrderCategory(id: 1, name: "Restaurantes", image: "hamburguer"))
     }
 }

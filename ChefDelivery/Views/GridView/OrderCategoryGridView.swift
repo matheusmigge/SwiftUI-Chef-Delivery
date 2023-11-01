@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OrderTypeGridView: View {
+struct OrderCategoryGridView: View {
     
 //    var gridLayout: [GridItem] {
 //        return Array(repeating: GridItem(.flexible(),spacing: 10), count: 2)
@@ -23,7 +23,7 @@ struct OrderTypeGridView: View {
         
         LazyHGrid(rows: gridLayout, spacing: 15) {
             ForEach(ordersMock) {orderItem in
-                OrderTypeView(orderType: orderItem)
+                OrderCategoryView(orderCategory: orderItem)
             }
         }
         .frame(height: 200)
@@ -32,8 +32,8 @@ struct OrderTypeGridView: View {
     }
 }
 
-struct OrderTypeGridView_Previews: PreviewProvider {
+struct OrderCategoryGridView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderTypeGridView()
+        OrderCategoryGridView()
     }
 }
