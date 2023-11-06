@@ -65,8 +65,8 @@
 		562E1BA72AE1D48A005FDD10 /* CarouselView */ = {
 			isa = PBXGroup;
 			children = (
-				562E1BA52AE1D44A005FDD10 /* CarouselItemView.swift */,
 				562E1BAA2AE1DCC5005FDD10 /* CarouselTabView.swift */,
+				562E1BA52AE1D44A005FDD10 /* CarouselItemView.swift */,
 			);
 			path = CarouselView;
 			sourceTree = "<group>";
@@ -177,9 +177,9 @@
 		56DE73932AE306090090C46B /* StoreView */ = {
 			isa = PBXGroup;
 			children = (
+				56E98D4E2AEEAC4400632E18 /* StoreDetailView.swift */,
 				56DE73942AE306400090C46B /* StoreItemView.swift */,
 				56DE73982AE316090090C46B /* StoreListView.swift */,
-				56E98D4E2AEEAC4400632E18 /* StoreDetailView.swift */,
 			);
 			path = StoreView;
 			sourceTree = "<group>";
