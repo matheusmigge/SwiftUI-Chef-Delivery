@@ -16,6 +16,6 @@ struct Product: Identifiable {
     let price: Double
     
     var formattedPrice: String {
-        return "R$ " + price.formatPrice()
+        return "R$ " + price.formatNumber()
     }
 }

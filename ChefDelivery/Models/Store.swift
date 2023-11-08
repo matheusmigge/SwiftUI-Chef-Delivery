@@ -15,6 +15,11 @@ struct Store: Identifiable {
     let foodCategory: String
     let headerImage: String
     let location: String
+    let distanceToUser: Double
     let starsQty: Int
     let products: [Product]
+    
+    var formattedDistanceToUser: String {
+        return distanceToUser.formatNumber() + " km"
+    }
 }
