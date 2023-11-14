@@ -124,7 +124,7 @@ struct StoreListView: View {
                 } else {
                     ForEach(filteredStores) { store in
                         NavigationLink {
-                            StoreDetailView(store: store)
+                            StorePageView(store: store)
                         } label: {
                             StoreItemView(store: store)
                         }
