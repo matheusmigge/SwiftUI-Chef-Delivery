@@ -124,7 +124,8 @@ struct StoreListView: View {
                 } else {
                     ForEach(filteredStores) { store in
                         NavigationLink {
-                            StorePageView(store: store)
+                            StorePageView()
+                                .environmentObject(store)
                         } label: {
                             StoreItemView(store: store)
                         }
@@ -141,6 +142,8 @@ struct StoreListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
             StoreListView()
+                .previewLayout(.sizeThatFits)
+                .environmentObject(storesMock[0])
         }
     }
 }
