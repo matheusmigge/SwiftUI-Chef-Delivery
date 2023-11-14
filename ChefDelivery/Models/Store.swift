@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Store: Identifiable {
+class Store: Identifiable, ObservableObject {
     
     let id: Int
     let name: String
@@ -18,6 +18,19 @@ struct Store: Identifiable {
     let distanceToUser: Double
     let starsQty: Int
     let products: [Product]
+    
+    init(id: Int, name: String, logo: String, foodCategory: String, headerImage: String, location: String, distanceToUser: Double, starsQty: Int, products: [Product]) {
+        
+        self.id = id
+        self.name = name
+        self.logo = logo
+        self.foodCategory = foodCategory
+        self.headerImage = headerImage
+        self.location = location
+        self.distanceToUser = distanceToUser
+        self.starsQty = starsQty
+        self.products = products
+    }
     
     var formattedDistanceToUser: String {
         return distanceToUser.formatNumber() + " km"

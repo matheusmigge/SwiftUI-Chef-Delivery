@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StorePageHeaderView: View {
     
-    var store: Store
+    @EnvironmentObject var store: Store
     
     var body: some View {
         VStack {
@@ -52,7 +52,9 @@ struct StorePageHeaderView: View {
     
     struct StorePageHeaderView_Previews: PreviewProvider {
         static var previews: some View {
-            StorePageHeaderView(store: storesMock[0])
+            StorePageHeaderView()
+                .previewLayout(.sizeThatFits)
+                .environmentObject(storesMock[1])
         }
     }
 }
