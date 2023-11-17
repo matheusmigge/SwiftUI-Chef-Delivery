@@ -9,6 +9,8 @@ import SwiftUI
 
 struct StoreListView: View {
     
+    @Environment(\.colorScheme) var colorScheme
+    
     @State private var ratingFilter = 0
     @State private var minDistanceFilter: Double = 0
     @State private var maxDistanceFilter: Double = 100
@@ -28,13 +30,13 @@ struct StoreListView: View {
             HStack {
                 Text("Lojas")
                     .font(.title)
+                    .foregroundColor(.primary)
                     .padding(.leading, 15)
                 
                 Spacer()
                 
                 HStack (spacing: 3) {
                     Menu("Estrelas") {
-                        
                         Button {
                             ratingFilter = 0
                         } label: {
@@ -42,12 +44,10 @@ struct StoreListView: View {
                                 Text("Limpar filtro")
                                 Image(systemName: "xmark")
                             }
-                            
                         }
                         
                         Divider()
 
-                        
                         ForEach(1...5, id: \.self) {rating in
                             Button {
                                 ratingFilter = rating
@@ -67,7 +67,7 @@ struct StoreListView: View {
                         }
                     }
                     .padding(5)
-                    .foregroundColor(ratingFilter == 0 ? .black : .white)
+                    .foregroundColor(ratingFilter == 0 ? .primary : .white)
                     .background(ratingFilter == 0 ? Color.clear : . accentColor)
                     .cornerRadius(10)
                     
@@ -85,7 +85,6 @@ struct StoreListView: View {
                         }
                         
                         Divider()
-
                         
                         ForEach(Array(stride(from: 0, through: 20, by: 5)), id: \.self) { distanceIncrease in
                             Button {
@@ -100,21 +99,21 @@ struct StoreListView: View {
                         }
                     }
                     .padding(5)
-                    .foregroundColor(maxDistanceFilter == 100 ? .black : .white)
+                    .foregroundColor(maxDistanceFilter == 100 ? .primary : .white)
                     .background(maxDistanceFilter == 100 ? Color.clear : .accentColor)
                     .cornerRadius(10)
                 }
                 .padding(2)
-                .background(.white)
+                .background(colorScheme == .light ? .white : .black)
                 .cornerRadius(10)
-                .shadow(color: .black.opacity(0.5), radius: 2, x: 0, y: 0)
+                .shadow(color: .primary.opacity(0.6), radius: 2, x: 0, y: 0)
             }
             
             VStack (spacing: 30) {
                 
                 if filteredStores.isEmpty {
                     Text("Nenhum loja encontrada para o(s) filtro(s) selecionado(s) :(")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.secondary)
                         .font(.system(size: 20))
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 32)
@@ -132,7 +131,7 @@ struct StoreListView: View {
                 }
             }
         }
-        .foregroundColor(.black)
+        .foregroundColor(.primary)
         .padding(20)
     }
 }

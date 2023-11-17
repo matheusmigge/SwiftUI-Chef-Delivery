@@ -46,6 +46,5 @@ struct StorePageView_Previews: PreviewProvider {
         NavigationView {
             StorePageView(store: storesMock[1])
         }
-        
     }
 }

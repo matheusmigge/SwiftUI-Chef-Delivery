@@ -37,7 +37,6 @@ struct ProductDetailQuantityView: View {
                     Image(systemName: "plus.circle.fill")
                         .font(.system(size: 30))
                 }
-
             }
         }
     }
