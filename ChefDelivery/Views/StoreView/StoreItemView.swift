@@ -39,20 +39,18 @@ struct StoreItemView: View {
                     Text(" • \(store.foodCategory) • \(store.formattedDistanceToUser)")
                         .font(.footnote)
                 }
-                
             }
             
             Spacer()
         }
-        .padding(.leading,15)
     }
-    
 }
 
 
 struct StoreItemView_Previews: PreviewProvider {
     static var previews: some View {
         StoreItemView(store: storesMock[0])
-            .padding(.horizontal)
+//            .padding(.horizontal)
+            .background(.red)
     }
 }

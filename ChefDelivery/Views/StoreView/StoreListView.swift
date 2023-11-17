@@ -31,7 +31,6 @@ struct StoreListView: View {
                 Text("Lojas")
                     .font(.title)
                     .foregroundColor(.primary)
-                    .padding(.leading, 15)
                 
                 Spacer()
                 
@@ -108,6 +107,7 @@ struct StoreListView: View {
                 .cornerRadius(10)
                 .shadow(color: .primary.opacity(0.6), radius: 2, x: 0, y: 0)
             }
+            .padding(.trailing, 3)
             
             VStack (spacing: 30) {
                 
@@ -133,7 +133,6 @@ struct StoreListView: View {
             }
         }
         .foregroundColor(.primary)
-        .padding(20)
     }
 }
 

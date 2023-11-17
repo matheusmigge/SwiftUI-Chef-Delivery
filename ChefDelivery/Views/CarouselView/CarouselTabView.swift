@@ -22,7 +22,7 @@ struct CarouselTabView: View {
                 }
             }
         }
-        .frame(height: 180)
+        .frame(height: 210)
         .tabViewStyle(.page(indexDisplayMode: .always))
         
     }

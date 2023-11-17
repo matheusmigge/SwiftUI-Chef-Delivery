@@ -201,8 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				56C6B9062B02C746007C390A /* StorePageView */,
-				56DE73942AE306400090C46B /* StoreItemView.swift */,
 				56DE73982AE316090090C46B /* StoreListView.swift */,
+				56DE73942AE306400090C46B /* StoreItemView.swift */,
 			);
 			path = StoreView;
 			sourceTree = "<group>";
