@@ -115,7 +115,6 @@
 				56DC25582AF2CE7100AC605F /* Extension */,
 				569D19D22ADF4644002FC2E1 /* App */,
 				56DC25552AF1B2A400AC605F /* Views */,
-				56DC255B2AF2DFCF00AC605F /* ProductView */,
 				5656422A2AE0469B007E763D /* Models */,
 				569D19C72ADF43C8002FC2E1 /* Assets.xcassets */,
 				569D19C92ADF43C8002FC2E1 /* Preview Content */,
@@ -175,6 +174,7 @@
 				569D19D52ADF6D61002FC2E1 /* GridView */,
 				562E1BA72AE1D48A005FDD10 /* CarouselView */,
 				56DE73932AE306090090C46B /* StoreView */,
+				56DC255B2AF2DFCF00AC605F /* ProductView */,
 			);
 			path = Views;
 			sourceTree = "<group>";

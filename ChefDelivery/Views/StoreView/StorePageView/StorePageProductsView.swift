@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StorePageProductsView: View {
     
-    let products: [Product]
+    @EnvironmentObject var store: Store
     @State private var selectedProduct: Product?
     
     var body: some View {
@@ -19,7 +19,7 @@ struct StorePageProductsView: View {
                 .bold()
                 .padding(.vertical, 10)
             
-            ForEach(products) { product in
+            ForEach(store.products) { product in
                 
                 Button {
                     selectedProduct = product
@@ -39,7 +39,12 @@ struct StorePageProductsView: View {
 
 struct StorePageProductsView_Previews: PreviewProvider {
     static var previews: some View {
+<<<<<<< HEAD
         StorePageProductsView(products: storesMock[1].products)
             .preferredColorScheme(.dark)
+=======
+        StorePageProductsView()
+            .environmentObject(storesMock[3])
+>>>>>>> main
     }
 }
