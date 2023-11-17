@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
         NavigationView {
             VStack {
                 NavigationBar()
@@ -20,12 +19,10 @@ struct ContentView: View {
                         OrderCategoryGridView()
                         CarouselTabView()
                         StoreListView()
-                    }   
+                    }
                 }
             }
-            
             .navigationBarHidden(true)
-                
         }
     }
 }
@@ -33,5 +30,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }

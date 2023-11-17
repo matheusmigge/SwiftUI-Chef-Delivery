@@ -33,12 +33,18 @@ struct StorePageProductsView: View {
         
         .sheet(item: $selectedProduct) { product in
             ProductDetailView(product: product)
-        }    }
+        }
+    }
 }
 
 struct StorePageProductsView_Previews: PreviewProvider {
     static var previews: some View {
+<<<<<<< HEAD
+        StorePageProductsView(products: storesMock[1].products)
+            .preferredColorScheme(.dark)
+=======
         StorePageProductsView()
             .environmentObject(storesMock[3])
+>>>>>>> main
     }
 }

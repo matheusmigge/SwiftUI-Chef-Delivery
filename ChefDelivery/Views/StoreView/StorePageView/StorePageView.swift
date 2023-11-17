@@ -47,6 +47,5 @@ struct StorePageView_Previews: PreviewProvider {
             StorePageView()
                 .environmentObject(storesMock[2])
         }
-        
     }
 }

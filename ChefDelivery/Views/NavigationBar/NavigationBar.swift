@@ -20,7 +20,7 @@ struct NavigationBar: View {
                 Text("Rua Vergueiro, 3185")
                     .font(.subheadline)
                     .fontWeight(.semibold)
-                    .foregroundColor(.black)
+                    .foregroundColor(.primary)
             }
             
             Spacer()
