@@ -39,12 +39,7 @@ struct StorePageProductsView: View {
 
 struct StorePageProductsView_Previews: PreviewProvider {
     static var previews: some View {
-<<<<<<< HEAD
-        StorePageProductsView(products: storesMock[1].products)
-            .preferredColorScheme(.dark)
-=======
         StorePageProductsView()
             .environmentObject(storesMock[3])
->>>>>>> main
     }
 }
