@@ -15,20 +15,19 @@ struct OrderCategoryGridView: View {
     
 // O código abaixo é uma alternativa ao de cima:
     var gridLayout: [GridItem] = [
-        GridItem(.flexible(), spacing: 10),
-        GridItem(.flexible(), spacing: 10)
+        GridItem(.flexible(), spacing: 5),
+        GridItem(.flexible(), spacing: 5)
     ]
     
     var body: some View {
         
-        LazyHGrid(rows: gridLayout, spacing: 15) {
+        LazyHGrid(rows: gridLayout, spacing: 20) {
             ForEach(ordersMock) {orderItem in
                 OrderCategoryView(orderCategory: orderItem)
             }
         }
+        .padding(.top, 10)
         .frame(height: 200)
-        .padding(.horizontal,15)
-        .padding(.top, 15)
     }
 }
 

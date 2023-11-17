@@ -14,14 +14,14 @@ struct ContentView: View {
                 NavigationBar()
                 
                 ScrollView(.vertical, showsIndicators: false) {
-                    
-                    VStack(spacing: 20) {
+                    VStack(spacing: 10) {
                         OrderCategoryGridView()
                         CarouselTabView()
                         StoreListView()
                     }
                 }
             }
+            .padding(.horizontal, 30)
             .navigationBarHidden(true)
         }
     }
