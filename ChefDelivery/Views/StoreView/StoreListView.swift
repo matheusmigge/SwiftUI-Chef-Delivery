@@ -67,11 +67,10 @@ struct StoreListView: View {
                     }
                     .padding(5)
                     .foregroundColor(ratingFilter == 0 ? .primary : .white)
-                    .background(ratingFilter == 0 ? Color.clear : . accentColor)
+                    .background(ratingFilter == 0 ? Color.clear : Color.chefDeliveryRed)
                     .cornerRadius(10)
                     
                     Menu("Distância") {
-                        
                         Button {
                             minDistanceFilter = 0
                             maxDistanceFilter = 100
@@ -80,7 +79,6 @@ struct StoreListView: View {
                                 Text("Limpar filtro")
                                 Image(systemName: "xmark")
                             }
-                            
                         }
                         
                         Divider()
@@ -99,7 +97,7 @@ struct StoreListView: View {
                     }
                     .padding(5)
                     .foregroundColor(maxDistanceFilter == 100 ? .primary : .white)
-                    .background(maxDistanceFilter == 100 ? Color.clear : .accentColor)
+                    .background(maxDistanceFilter == 100 ? Color.clear : Color.chefDeliveryRed)
                     .cornerRadius(10)
                 }
                 .padding(2)

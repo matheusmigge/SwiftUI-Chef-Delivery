@@ -50,7 +50,5 @@ struct StoreItemView: View {
 struct StoreItemView_Previews: PreviewProvider {
     static var previews: some View {
         StoreItemView(store: storesMock[0])
-//            .padding(.horizontal)
-            .background(.red)
     }
 }

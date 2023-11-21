@@ -28,7 +28,7 @@ struct NavigationBar: View {
             Button(action: {}) {
                 Image(systemName: "bell.badge")
                     .font(.title3)
-                    .foregroundColor(.red)
+                    .foregroundColor(.chefDeliveryRed)
             }
         }.padding(.horizontal, 15)
         

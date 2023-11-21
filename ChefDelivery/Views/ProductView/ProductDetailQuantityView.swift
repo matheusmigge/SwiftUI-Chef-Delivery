@@ -23,8 +23,14 @@ struct ProductDetailQuantityView: View {
                         productQty -= 1
                     }
                 } label: {
-                    Image(systemName: "minus.circle.fill")
-                        .font(.system(size: 30))
+                    ZStack {
+                        Image(systemName: "circle.fill")
+                            .font(.system(size: 30))
+                            .foregroundColor(.chefDeliveryRed)
+                        Image(systemName: "minus")
+                            .font(.system(size: 20))
+                            .foregroundColor(.white)
+                    }
                 }
                 
                 Text("\(productQty)")
@@ -34,8 +40,14 @@ struct ProductDetailQuantityView: View {
                 Button {
                     productQty += 1
                 } label: {
-                    Image(systemName: "plus.circle.fill")
-                        .font(.system(size: 30))
+                    ZStack {
+                        Image(systemName: "circle.fill")
+                            .font(.system(size: 30))
+                            .foregroundColor(.chefDeliveryRed)
+                        Image(systemName: "plus")
+                            .font(.system(size: 20))
+                            .foregroundColor(.white)
+                    }
                 }
             }
         }
@@ -45,5 +57,6 @@ struct ProductDetailQuantityView: View {
 struct ProductDetailQuantityView_Previews: PreviewProvider {
     static var previews: some View {
         ProductDetailQuantityView()
+            .preferredColorScheme(.dark)
     }
 }

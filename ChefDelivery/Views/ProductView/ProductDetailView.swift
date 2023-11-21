@@ -48,10 +48,10 @@ struct ProductDetailButtonView: View {
             .padding(.horizontal,32)
             .padding(.vertical,16)
             .font(.title3)
-            .background(Color.accentColor)
+            .background(Color.chefDeliveryRed)
             .foregroundColor(.white)
             .cornerRadius(32)
-            .shadow(color: Color.accentColor.opacity(0.5), radius: 10, x: 6, y: 8)
+            .shadow(color: Color.chefDeliveryRed.opacity(0.5), radius: 10, x: 6, y: 8)
         }
     }
 }
